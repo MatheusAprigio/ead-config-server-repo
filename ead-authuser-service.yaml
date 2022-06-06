@@ -23,7 +23,7 @@ spring:
     ansi:
       enabled: Always
   rabbitmq:
-    addresses: amqps://shteaona:SXPDamQxdOqxvVuMFFs-rQ0JCdblMkgB@woodpecker.rmq.cloudamqp.com/shteaona
+    addresses: amqps://shteaona:J8Nfe3miopJuxgyF3Kr1qaIqBE-TRnuE@woodpecker.rmq.cloudamqp.com/shteaona
 
 logging:
   level:
@@ -39,6 +39,15 @@ ead:
   broker:
     exchange:
       userEvent: ead.userevent
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - health
+
 
 resilience4j:
   circuitbreaker:
